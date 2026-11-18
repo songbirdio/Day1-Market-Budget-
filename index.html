@@ -1221,6 +1221,13 @@
           listDiv.appendChild(row);
         });
       }
+      // 7. NORMAL APP EVENTS
+      // When the budget box changes, update the budget
+      budgetInput.addEventListener("input", function () {
+        budget = Number(budgetInput.value) || 0;
+        save();
+        render();
+      });
     </script>
   </body>
 </html>
